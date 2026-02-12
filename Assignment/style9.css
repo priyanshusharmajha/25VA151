@@ -1,0 +1,93 @@
+/* General Styling (Replicating inline styles from screenshot) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* * Product Grid 
+ * Defines the main container for the products.
+ */
+.grid {
+    display: grid;
+    /* For large screens: 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* * Product Card 
+ * Styles for each individual product box.
+ */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+/* Optional: Hover effect for better user experience */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Image Styling */
+.card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* Product Title Styling */
+.card h3 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+/* Product Description Styling */
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Price Styling */
+.price {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Link Styling (to remove underline and change color) */
+.card a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from card */
+}
+
+/* * Responsive Breakpoints 
+ */
+
+/* Media query for tablets (up to 1024px) */
+@media (max-width: 1024px) {
+    .grid {
+        /* Change to 2 equal columns for tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media query for mobile devices (up to 600px) */
+@media (max-width: 600px) {
+    .grid {
+        /* Change to 1 full-width column for mobile */
+        grid-template-columns: 1fr;
+    }
+}
